@@ -28,14 +28,14 @@ const ParticleBackground: React.FC = () => {
     }> = [];
 
     // Create particles
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 80; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 3 + 1,
-        opacity: Math.random() * 0.5 + 0.2,
+        vx: (Math.random() - 0.5) * 0.8,
+        vy: (Math.random() - 0.5) * 0.8,
+        size: Math.random() * 4 + 1,
+        opacity: Math.random() * 0.6 + 0.2,
       });
     }
 
@@ -56,7 +56,14 @@ const ParticleBackground: React.FC = () => {
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(59, 130, 246, ${particle.opacity})`;
+        const gradient = ctx.createRadialGradient(
+          particle.x, particle.y, 0,
+          particle.x, particle.y, particle.size
+        );
+        gradient.addColorStop(0, `rgba(59, 130, 246, ${particle.opacity})`);
+        gradient.addColorStop(0.5, `rgba(147, 51, 234, ${particle.opacity * 0.8})`);
+        gradient.addColorStop(1, `rgba(59, 130, 246, 0)`);
+        ctx.fillStyle = gradient;
         ctx.fill();
       });
 
@@ -67,11 +74,12 @@ const ParticleBackground: React.FC = () => {
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
+          if (distance < 120) {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.strokeStyle = `rgba(59, 130, 246, ${0.1 * (1 - distance / 100)})`;
+            const opacity = 0.15 * (1 - distance / 120);
+            ctx.strokeStyle = `rgba(147, 51, 234, ${opacity})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
