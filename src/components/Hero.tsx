@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Download, ArrowDown, Phone, MapPin, Mail, Linkedin, Github, Sparkles } from 'lucide-react';
-import ParticleBackground from './ParticleBackground';
+import { Download, ArrowDown, Mail, Linkedin, Github, Sparkles } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const [displayText, setDisplayText] = useState('');
@@ -23,14 +22,37 @@ const Hero: React.FC = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 dark:from-blue-900 dark:via-purple-900 dark:to-indigo-900">
-      <ParticleBackground />
+      {/* Enhanced Background Pattern */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Geometric Pattern */}
+        <div className="absolute inset-0 opacity-10 dark:opacity-20">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent dark:from-white/10 dark:to-transparent"></div>
+          <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+                <path d="M 60 0 L 0 0 0 60" fill="none" stroke="currentColor" strokeWidth="1" className="text-white/20 dark:text-white/10"/>
+              </pattern>
+              <pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse">
+                <circle cx="20" cy="20" r="1.5" fill="currentColor" className="text-white/30 dark:text-white/20"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+            <rect width="100%" height="100%" fill="url(#dots)" />
+          </svg>
+        </div>
+        
+        {/* Animated Gradient Orbs */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400/30 to-purple-400/30 dark:from-blue-600/20 dark:to-purple-600/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-400/30 to-pink-400/30 dark:from-purple-600/20 dark:to-pink-600/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-indigo-400/20 to-blue-400/20 dark:from-indigo-600/15 dark:to-blue-600/15 rounded-full blur-2xl animate-pulse"></div>
+      </div>
       
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-400/20 rounded-full blur-xl animate-float"></div>
-        <div className="absolute top-40 right-20 w-32 h-32 bg-purple-400/20 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-40 left-20 w-24 h-24 bg-indigo-400/20 rounded-full blur-xl animate-float" style={{ animationDelay: '4s' }}></div>
-        <div className="absolute bottom-20 right-10 w-16 h-16 bg-pink-400/20 rounded-full blur-xl animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 dark:bg-white/5 rounded-full blur-xl animate-float"></div>
+        <div className="absolute top-40 right-20 w-32 h-32 bg-white/15 dark:bg-white/8 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-40 left-20 w-24 h-24 bg-white/12 dark:bg-white/6 rounded-full blur-xl animate-float" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute bottom-20 right-10 w-16 h-16 bg-white/8 dark:bg-white/4 rounded-full blur-xl animate-float" style={{ animationDelay: '1s' }}></div>
       </div>
       
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
@@ -83,31 +105,8 @@ const Hero: React.FC = () => {
               bringing creativity to complex VLSI challenges.
             </p>
 
-            {/* Contact Info Cards */}
-            <div className="grid md:grid-cols-2 gap-4 animate-slide-in-bottom" data-aos="fade-up" data-aos-delay="800">
-              <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="p-2 bg-green-500/20 rounded-lg">
-                  <Phone className="w-5 h-5 text-green-400" />
-                </div>
-                <div>
-                  <p className="text-sm text-blue-200">Phone</p>
-                  <p className="text-white font-medium">9701709113</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="p-2 bg-blue-500/20 rounded-lg">
-                  <MapPin className="w-5 h-5 text-blue-400" />
-                </div>
-                <div>
-                  <p className="text-sm text-blue-200">Location</p>
-                  <p className="text-white font-medium">Mandapeta, AP</p>
-                </div>
-              </div>
-            </div>
-
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6 animate-bounce-in" data-aos="fade-up" data-aos-delay="1000">
+            <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6 animate-bounce-in" data-aos="fade-up" data-aos-delay="800">
               <button
                 onClick={scrollToAbout}
                 className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl flex items-center space-x-2"
@@ -127,7 +126,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center space-x-4 pt-4" data-aos="fade-up" data-aos-delay="1200">
+            <div className="flex items-center space-x-4 pt-4" data-aos="fade-up" data-aos-delay="1000">
               <span className="text-blue-200 text-sm">Connect with me:</span>
               <div className="flex space-x-3">
                 <a href="mailto:harini.y2k22@gmail.com" className="p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:bg-white/20 hover:scale-110 transition-all duration-300">
@@ -216,19 +215,8 @@ const Hero: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow" data-aos="fade-up" data-aos-delay="1400">
-          <button 
-            onClick={scrollToAbout} 
-            className="flex flex-col items-center space-y-2 text-blue-300 hover:text-white transition-colors duration-200 group"
-          >
-            <span className="text-sm font-medium">Scroll to explore</span>
-            <div className="w-6 h-10 border-2 border-current rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-current rounded-full mt-2 animate-bounce"></div>
-            </div>
-          </button>
+        </div>
         </div>
       </div>
     </section>
