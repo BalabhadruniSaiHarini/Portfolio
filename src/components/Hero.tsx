@@ -22,51 +22,93 @@ const Hero: React.FC = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 dark:from-blue-900 dark:via-purple-900 dark:to-indigo-900">
-      {/* Enhanced Background Pattern */}
+      {/* Modern Wave Background */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Blue Themed Background Pattern */}
-        <div className="absolute inset-0">
-          {/* Base gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 via-indigo-500/5 to-purple-600/10 dark:from-blue-600/20 dark:via-indigo-700/15 dark:to-purple-800/20"></div>
+        {/* Animated Wave Layers */}
+        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="wave1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="rgba(59, 130, 246, 0.1)" />
+              <stop offset="50%" stopColor="rgba(99, 102, 241, 0.15)" />
+              <stop offset="100%" stopColor="rgba(147, 51, 234, 0.1)" />
+            </linearGradient>
+            <linearGradient id="wave2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="rgba(147, 51, 234, 0.08)" />
+              <stop offset="50%" stopColor="rgba(59, 130, 246, 0.12)" />
+              <stop offset="100%" stopColor="rgba(99, 102, 241, 0.08)" />
+            </linearGradient>
+            <linearGradient id="wave3" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="rgba(99, 102, 241, 0.06)" />
+              <stop offset="50%" stopColor="rgba(147, 51, 234, 0.1)" />
+              <stop offset="100%" stopColor="rgba(59, 130, 246, 0.06)" />
+            </linearGradient>
+          </defs>
           
-          {/* Hexagonal pattern */}
-          <svg className="absolute inset-0 w-full h-full opacity-20 dark:opacity-30" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="hexagons" width="80" height="80" patternUnits="userSpaceOnUse">
-                <path d="M40 10 L60 25 L60 55 L40 70 L20 55 L20 25 Z" fill="none" stroke="rgb(59 130 246)" strokeWidth="0.5" opacity="0.3"/>
-              </pattern>
-              <pattern id="blueDots" width="50" height="50" patternUnits="userSpaceOnUse">
-                <circle cx="25" cy="25" r="1" fill="rgb(59 130 246)" opacity="0.4"/>
-                <circle cx="0" cy="0" r="0.5" fill="rgb(99 102 241)" opacity="0.3"/>
-                <circle cx="50" cy="50" r="0.5" fill="rgb(99 102 241)" opacity="0.3"/>
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#hexagons)" />
-            <rect width="100%" height="100%" fill="url(#blueDots)" />
-          </svg>
+          {/* Wave Layer 1 */}
+          <path d="M0,400 C300,300 600,500 1200,400 L1200,800 L0,800 Z" fill="url(#wave1)" className="animate-wave-slow">
+            <animateTransform
+              attributeName="transform"
+              type="translate"
+              values="0,0; 50,0; 0,0"
+              dur="20s"
+              repeatCount="indefinite"
+            />
+          </path>
           
-          {/* Circuit-like lines */}
-          <div className="absolute inset-0 opacity-10 dark:opacity-20">
-            <div className="absolute top-20 left-10 w-32 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
-            <div className="absolute top-40 right-20 w-24 h-px bg-gradient-to-r from-transparent via-indigo-400 to-transparent"></div>
-            <div className="absolute bottom-32 left-1/4 w-40 h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
-            <div className="absolute top-1/2 right-10 h-20 w-px bg-gradient-to-b from-transparent via-purple-400 to-transparent"></div>
-            <div className="absolute bottom-20 right-1/3 h-16 w-px bg-gradient-to-b from-transparent via-indigo-400 to-transparent"></div>
-          </div>
+          {/* Wave Layer 2 */}
+          <path d="M0,450 C400,350 800,550 1200,450 L1200,800 L0,800 Z" fill="url(#wave2)" className="animate-wave-medium">
+            <animateTransform
+              attributeName="transform"
+              type="translate"
+              values="0,0; -30,0; 0,0"
+              dur="15s"
+              repeatCount="indefinite"
+            />
+          </path>
+          
+          {/* Wave Layer 3 */}
+          <path d="M0,500 C200,400 900,600 1200,500 L1200,800 L0,800 Z" fill="url(#wave3)" className="animate-wave-fast">
+            <animateTransform
+              attributeName="transform"
+              type="translate"
+              values="0,0; 40,0; 0,0"
+              dur="12s"
+              repeatCount="indefinite"
+            />
+          </path>
+        </svg>
+        
+        {/* Geometric Shapes */}
+        <div className="absolute inset-0 opacity-20 dark:opacity-30">
+          {/* Triangular shapes */}
+          <div className="absolute top-20 left-20 w-0 h-0 border-l-[20px] border-r-[20px] border-b-[35px] border-l-transparent border-r-transparent border-b-white/20 animate-float"></div>
+          <div className="absolute top-40 right-32 w-0 h-0 border-l-[15px] border-r-[15px] border-b-[26px] border-l-transparent border-r-transparent border-b-white/15 animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute bottom-32 left-32 w-0 h-0 border-l-[25px] border-r-[25px] border-b-[43px] border-l-transparent border-r-transparent border-b-white/10 animate-float" style={{ animationDelay: '4s' }}></div>
+          
+          {/* Diamond shapes */}
+          <div className="absolute top-60 right-20 w-6 h-6 bg-white/10 transform rotate-45 animate-spin-slow"></div>
+          <div className="absolute bottom-40 right-40 w-4 h-4 bg-white/15 transform rotate-45 animate-spin-slow" style={{ animationDirection: 'reverse' }}></div>
+          <div className="absolute top-80 left-40 w-8 h-8 bg-white/8 transform rotate-45 animate-spin-slow" style={{ animationDelay: '3s' }}></div>
         </div>
         
-        {/* Blue Gradient Orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400/20 to-indigo-500/25 dark:from-blue-600/15 dark:to-indigo-700/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-indigo-400/25 to-blue-500/20 dark:from-indigo-600/20 dark:to-blue-700/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-blue-300/15 to-indigo-400/20 dark:from-blue-500/10 dark:to-indigo-600/15 rounded-full blur-2xl animate-pulse"></div>
+        {/* Glowing Orbs */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-blue-400/15 via-purple-500/10 to-transparent rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-radial from-purple-400/20 via-indigo-500/15 to-transparent rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-radial from-indigo-300/12 via-blue-400/8 to-transparent rounded-full blur-2xl animate-pulse"></div>
       </div>
       
-      {/* Blue Floating Elements */}
+      {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-400/10 dark:bg-blue-500/8 rounded-full blur-xl animate-float"></div>
-        <div className="absolute top-40 right-20 w-32 h-32 bg-indigo-400/12 dark:bg-indigo-500/10 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-40 left-20 w-24 h-24 bg-blue-500/8 dark:bg-blue-600/6 rounded-full blur-xl animate-float" style={{ animationDelay: '4s' }}></div>
-        <div className="absolute bottom-20 right-10 w-16 h-16 bg-indigo-300/10 dark:bg-indigo-400/8 rounded-full blur-xl animate-float" style={{ animationDelay: '1s' }}></div>
+        {/* Floating circles */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-white/5 rounded-full blur-xl animate-float"></div>
+        <div className="absolute top-40 right-20 w-32 h-32 bg-white/8 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-40 left-20 w-24 h-24 bg-white/6 rounded-full blur-xl animate-float" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute bottom-20 right-10 w-16 h-16 bg-white/4 rounded-full blur-xl animate-float" style={{ animationDelay: '1s' }}></div>
+        
+        {/* Floating lines */}
+        <div className="absolute top-32 left-1/3 w-40 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
+        <div className="absolute bottom-32 right-1/3 w-32 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-20 h-24 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
       
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
