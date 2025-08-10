@@ -85,6 +85,40 @@ const About: React.FC = () => {
                 </div>
               ))}
             </div>
+
+            {/* Strengths */}
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="flex items-center mb-6">
+                <div className="w-8 h-8 text-green-600 mr-3 animate-pulse">💪</div>
+                <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Strengths</h3>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {[
+                  { name: 'Team Collaboration', emoji: '🤝' },
+                  { name: 'Communication', emoji: '💬' },
+                  { name: 'Adaptability', emoji: '🔄' },
+                  { name: 'Detail-Oriented', emoji: '🔍' },
+                  { name: 'Self-Driven', emoji: '⚡' },
+                  { name: 'Time Management', emoji: '⏰' },
+                  { name: 'Critical Thinking', emoji: '🧠' },
+                  { name: 'Problem Solving', emoji: '🔧' },
+                  { name: 'Leadership Potential', emoji: '👑' },
+                  { name: 'Continuous Learning', emoji: '📚' },
+                  { name: 'Innovation Mindset', emoji: '💡' },
+                  { name: 'Quality Focus', emoji: '✨' }
+                ].map((strength, index) => (
+                  <div 
+                    key={index}
+                    className="flex items-center p-3 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 animate-fade-in-stagger"
+                    data-aos="fade-up"
+                    data-aos-delay={index * 50}
+                  >
+                    <span className="text-xl mr-3">{strength.emoji}</span>
+                    <span className="text-gray-700 dark:text-gray-300 text-sm font-medium">{strength.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

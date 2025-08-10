@@ -35,7 +35,6 @@ function App() {
           <Internships />
           <Certifications />
           <Achievements />
-          <SoftSkills />
           <Contact />
         </main>
       </div>
