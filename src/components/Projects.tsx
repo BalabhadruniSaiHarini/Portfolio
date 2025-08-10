@@ -164,15 +164,15 @@ const Projects: React.FC = () => {
 
                   {/* Action Buttons */}
                   <div className="flex space-x-3">
-                    <button
+                    <a href="https://github.com/BalabhadruniSaiHarini/FPGA_Controlled_Automated_Coffee_Maker"> <button
                       onClick={() => setSelectedProject(project)}
                       className={`flex-1 px-4 py-2 bg-gradient-to-r ${colorClasses.gradient} text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium hover:scale-105 transform`}
                     >
                       View Details
-                    </button>
-                    <button className="p-2 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 hover:scale-110 transform">
+                    </button></a>
+                    <a href="https://github.com/BalabhadruniSaiHarini/FPGA_Controlled_Automated_Coffee_Maker"> <button className="p-2 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 hover:scale-110 transform">
                       <Github className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                    </button>
+                    </button></a>
                   </div>
                 </div>
               </div>
