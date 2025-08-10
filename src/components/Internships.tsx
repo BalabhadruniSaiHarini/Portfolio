@@ -19,24 +19,22 @@ const Internships: React.FC = () => {
   const internships: Internship[] = [
     {
       id: 1,
-      company: 'TechCorp Solutions',
+      company: 'Technical Hub',
       position: 'VLSI Design Verification Intern',
       duration: 'June 2024 - August 2024',
-      location: 'Hyderabad, India',
+      location: 'Surampalem, AP',
       type: 'Summer Internship',
       description: 'Gained hands-on experience in VLSI design verification methodologies and industry-standard tools.',
       responsibilities: [
         'Developed testbenches using SystemVerilog and UVM',
         'Performed functional verification of digital IP blocks',
-        'Analyzed coverage reports and improved test scenarios',
-        'Collaborated with design teams on bug identification and resolution'
+        'Analyzed coverage reports and improved test scenarios'
       ],
       technologies: ['SystemVerilog', 'UVM', 'Cadence Tools', 'Verilog', 'Python'],
       achievements: [
         'Achieved 95% functional coverage on assigned IP blocks',
         'Identified and reported 12 critical design bugs',
-        'Reduced verification time by 20% through optimized testbenches',
-        'Received excellent performance rating from supervisor'
+        'Reduced verification time by 20% through optimized testbenches'
       ],
       status: 'completed'
     },
