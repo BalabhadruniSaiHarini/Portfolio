@@ -93,10 +93,10 @@ const Hero: React.FC = () => {
                 <a href="mailto:harini.y2k22@gmail.com" className="p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:bg-white/20 hover:scale-110 transition-all duration-300">
                   <Mail className="w-5 h-5 text-gray-700 dark:text-white" />
                 </a>
-                <a href="#" className="p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:bg-white/20 hover:scale-110 transition-all duration-300">
+                <a href="https://www.linkedin.com/in/saiharini-balabhadruni/" className="p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:bg-white/20 hover:scale-110 transition-all duration-300">
                   <Linkedin className="w-5 h-5 text-gray-700 dark:text-white" />
                 </a>
-                <a href="#" className="p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:bg-white/20 hover:scale-110 transition-all duration-300">
+                <a href="https://github.com/BalabhadruniSaiHarini" className="p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:bg-white/20 hover:scale-110 transition-all duration-300">
                   <Github className="w-5 h-5 text-gray-700 dark:text-white" />
                 </a>
               </div>
