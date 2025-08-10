@@ -21,7 +21,7 @@ const Internships: React.FC = () => {
       id: 1,
       company: 'Technical Hub',
       position: 'VLSI Design Verification Intern',
-      duration: 'June 2024 - August 2024',
+      duration: 'June 2024 - 2025',
       location: 'Surampalem, AP',
       type: 'Summer Internship',
       description: 'Gained hands-on experience in VLSI design verification methodologies and industry-standard tools.',
@@ -36,54 +36,54 @@ const Internships: React.FC = () => {
         'Identified and reported 12 critical design bugs',
         'Reduced verification time by 20% through optimized testbenches'
       ],
-      status: 'completed'
-    },
-    {
-      id: 2,
-      company: 'Semiconductor Innovations Ltd',
-      position: 'Digital Design Intern',
-      duration: 'December 2024 - February 2025',
-      location: 'Bangalore, India',
-      type: 'Winter Internship',
-      description: 'Working on advanced digital design projects and FPGA implementation of complex algorithms.',
-      responsibilities: [
-        'Design and implement digital circuits using Verilog HDL',
-        'FPGA prototyping and validation of designs',
-        'Performance optimization and timing analysis',
-        'Documentation of design specifications and test results'
-      ],
-      technologies: ['Verilog', 'FPGA', 'Xilinx Vivado', 'MATLAB', 'C++'],
-      achievements: [
-        'Successfully implemented complex DSP algorithms on FPGA',
-        'Optimized design for 30% better resource utilization',
-        'Contributed to patent application for novel design approach',
-        'Mentored junior interns on FPGA programming'
-      ],
       status: 'ongoing'
     },
     {
-      id: 3,
-      company: 'Future Electronics Research',
-      position: 'Research Intern - AI Hardware',
-      duration: 'May 2025 - July 2025',
-      location: 'Chennai, India',
-      type: 'Research Internship',
-      description: 'Upcoming research internship focusing on AI accelerator design and neuromorphic computing.',
+      id: 2,
+      company: 'Technical Hub',
+      position: 'Full Stack Intern',
+      duration: 'September 2022 - December 2022',
+      location: 'Surampalem, AP',
+      type: 'Training Internship',
+      description: 'Gained hands-on experience in developing both front-end and back-end components of web applications. Interns work with various technologies to build, test, and deploy functional, user-friendly software solutions.',
       responsibilities: [
-        'Research on AI hardware acceleration techniques',
-        'Design of neural network processing units',
-        'Performance analysis of neuromorphic architectures',
-        'Collaboration with academic research teams'
+        'Supporting the design, coding, and testing of software solutions.',
+        'Participating in code reviews and learning best practices in web development.',
+        'Building and integrating RESTful APIs.',
+        'Documenting technical processes and contributing to project discussions.',
+        'Staying current with modern frameworks, languages, and technologies.'
       ],
-      technologies: ['SystemVerilog', 'Python', 'TensorFlow', 'Cadence', 'Machine Learning'],
+      technologies: ['HTML', 'CSS', 'JavaScript', 'AWS', 'PHP','BootStrap','MongoDB'],
       achievements: [
-        'Selected from 500+ applicants nationwide',
-        'Research proposal accepted for implementation',
-        'Opportunity to work with leading AI hardware experts',
-        'Potential for research publication'
+        'Won 1st prize in bootcamp after internship completion.',
+        'Certified in HTML and CSS from IT Specialist',
+        'Successfully deployed a full stack web application on a cloud platform, demonstrating end-to-end project skills.'
       ],
-      status: 'upcoming'
+      status: 'completed'
     }
+    // {
+    //   id: 3,
+    //   company: 'Future Electronics Research',
+    //   position: 'Research Intern - AI Hardware',
+    //   duration: 'May 2025 - July 2025',
+    //   location: 'Chennai, India',
+    //   type: 'Research Internship',
+    //   description: 'Upcoming research internship focusing on AI accelerator design and neuromorphic computing.',
+    //   responsibilities: [
+    //     'Research on AI hardware acceleration techniques',
+    //     'Design of neural network processing units',
+    //     'Performance analysis of neuromorphic architectures',
+    //     'Collaboration with academic research teams'
+    //   ],
+    //   technologies: ['SystemVerilog', 'Python', 'TensorFlow', 'Cadence', 'Machine Learning'],
+    //   achievements: [
+    //     'Selected from 500+ applicants nationwide',
+    //     'Research proposal accepted for implementation',
+    //     'Opportunity to work with leading AI hardware experts',
+    //     'Potential for research publication'
+    //   ],
+    //   status: 'upcoming'
+    // }
   ];
 
   const getStatusColor = (status: string) => {
