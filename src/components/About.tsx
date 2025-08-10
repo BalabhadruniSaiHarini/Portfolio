@@ -34,56 +34,33 @@ const About: React.FC = () => {
                     </span>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Progress Metrics */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-xl hover:scale-105 transition-transform duration-300 animate-fade-in-up">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">8.71</div>
-                <div className="text-gray-600 dark:text-gray-400">CGPA</div>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-xl hover:scale-105 transition-transform duration-300 animate-fade-in-up">
-                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">9+</div>
-                <div className="text-gray-600 dark:text-gray-400">Certifications</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Career Objective */}
-          <div className="space-y-8 animate-slide-in-right" data-aos="fade-left">
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="flex items-center mb-6">
-                <Target className="w-8 h-8 text-purple-600 mr-3 animate-spin-slow" />
-                <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Career Objective</h3>
-              </div>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-                A passionate and motivated Electronics graduate seeking an entry-level position in 
-                <span className="font-semibold text-blue-600 dark:text-blue-400"> VLSI Design Verification</span>. 
-                Eager to contribute to semiconductor innovation using my skills in 
-                <span className="font-semibold text-purple-600 dark:text-purple-400"> SystemVerilog, UVM, Verilog</span>, 
-                and scripting, along with a strong foundation in digital design concepts and verification methodologies.
-              </p>
-            </div>
-
-            {/* Key Highlights */}
-            <div className="grid grid-cols-1 gap-4">
-              {[
-                'Strong foundation in VLSI Design & Verification',
-                'Proficient in SystemVerilog and UVM',
-                'Experience with industry-standard tools',
-                'Passionate about semiconductor innovation'
-              ].map((highlight, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 animate-slide-in-stagger"
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
-                >
-                  <div className="w-3 h-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mr-4 animate-pulse"></div>
-                  <span className="text-gray-700 dark:text-gray-300">{highlight}</span>
+                <div className="border-t border-gray-200 dark:border-gray-600 pt-4">
+                  <h4 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
+                    Diploma in ECE
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-400">Aditya Polytechnic College - Surampalem</p>
+                  <p className="text-gray-600 dark:text-gray-400">2020 - 2023</p>
+                  <div className="mt-2 flex items-center">
+                    <Award className="w-5 h-5 text-yellow-500 mr-2" />
+                    <span className="text-lg font-semibold text-blue-600 dark:text-blue-400">
+                      Percentage: 94%
+                    </span>
+                  </div>
                 </div>
-              ))}
+                <div className="border-t border-gray-200 dark:border-gray-600 pt-4">
+                  <h4 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
+                    10th Grade
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-400">Sri Annapurna CBSE High School - Mandapeta</p>
+                  <p className="text-gray-600 dark:text-gray-400">2020</p>
+                  <div className="mt-2 flex items-center">
+                    <Award className="w-5 h-5 text-yellow-500 mr-2" />
+                    <span className="text-lg font-semibold text-blue-600 dark:text-blue-400">
+                      Percentage: 95%
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Strengths */}
@@ -118,6 +95,55 @@ const About: React.FC = () => {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+
+          {/* Career Objective */}
+          <div className="space-y-8 animate-slide-in-right" data-aos="fade-left">
+            {/* Progress Metrics */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-xl hover:scale-105 transition-transform duration-300 animate-fade-in-up">
+                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">8.71</div>
+                <div className="text-gray-600 dark:text-gray-400">CGPA</div>
+              </div>
+              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-xl hover:scale-105 transition-transform duration-300 animate-fade-in-up">
+                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">9+</div>
+                <div className="text-gray-600 dark:text-gray-400">Certifications</div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="flex items-center mb-6">
+                <Target className="w-8 h-8 text-purple-600 mr-3 animate-spin-slow" />
+                <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Career Objective</h3>
+              </div>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                A passionate and motivated Electronics graduate seeking an entry-level position in 
+                <span className="font-semibold text-blue-600 dark:text-blue-400"> VLSI Design Verification</span>. 
+                Eager to contribute to semiconductor innovation using my skills in 
+                <span className="font-semibold text-purple-600 dark:text-purple-400"> SystemVerilog, UVM, Verilog</span>, 
+                and scripting, along with a strong foundation in digital design concepts and verification methodologies.
+              </p>
+            </div>
+
+            {/* Key Highlights */}
+            <div className="grid grid-cols-1 gap-4">
+              {[
+                'Strong foundation in VLSI Design & Verification',
+                'Proficient in SystemVerilog and UVM',
+                'Experience with industry-standard tools',
+                'Passionate about semiconductor innovation'
+              ].map((highlight, index) => (
+                <div 
+                  key={index}
+                  className="flex items-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 animate-slide-in-stagger"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                >
+                  <div className="w-3 h-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mr-4 animate-pulse"></div>
+                  <span className="text-gray-700 dark:text-gray-300">{highlight}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
