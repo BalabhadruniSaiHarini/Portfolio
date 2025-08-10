@@ -34,22 +34,12 @@ const Hero: React.FC = () => {
             
             {/* Name with Gradient */}
             <div className="space-y-6">
-              {/* Greeting - moved closer to name */}
-              <div className="flex items-center space-x-3">
-                <div className="flex space-x-1">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
-                </div>
-                <span className="text-green-400 font-medium">Hello, I'm</span>
-              </div>
-              
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                <span className="bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent animate-slide-up">
+                <span className="bg-gradient-to-r from-white via-blue-100 to-purple-100 dark:from-white dark:via-blue-100 dark:to-purple-100 bg-clip-text text-transparent animate-slide-up">
                   HARINI
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-purple-100 via-pink-100 to-white bg-clip-text text-transparent animate-slide-up" style={{ animationDelay: '0.2s' }}>
+                <span className="bg-gradient-to-r from-purple-100 via-pink-100 to-white dark:from-purple-100 dark:via-pink-100 dark:to-white bg-clip-text text-transparent animate-slide-up" style={{ animationDelay: '0.2s' }}>
                   BALABHADRUNI
                 </span>
               </h1>
@@ -63,14 +53,14 @@ const Hero: React.FC = () => {
 
             {/* Typewriter Effect */}
             <div className="h-16 mb-6" data-aos="fade-up" data-aos-delay="400">
-              <p className="text-xl md:text-2xl font-medium text-blue-100">
+              <p className="text-xl md:text-2xl font-medium text-gray-800 dark:text-blue-100">
                 {displayText}
-                <span className="animate-pulse text-white">|</span>
+                <span className="animate-pulse text-gray-900 dark:text-white">|</span>
               </p>
             </div>
 
             {/* Description */}
-            <p className="text-lg md:text-xl text-blue-100 max-w-2xl leading-relaxed animate-fade-in-delay-2" data-aos="fade-up" data-aos-delay="600">
+            <p className="text-lg md:text-xl text-gray-700 dark:text-blue-100 max-w-2xl leading-relaxed animate-fade-in-delay-2" data-aos="fade-up" data-aos-delay="600">
               Passionate about <span className="text-yellow-400 font-semibold">semiconductor innovation</span> and 
               <span className="text-pink-400 font-semibold"> digital design verification</span>, 
               bringing creativity to complex VLSI challenges.
@@ -98,16 +88,16 @@ const Hero: React.FC = () => {
 
             {/* Social Links */}
             <div className="flex items-center space-x-4 pt-4" data-aos="fade-up" data-aos-delay="1000">
-              <span className="text-blue-200 text-sm">Connect with me:</span>
+              <span className="text-gray-600 dark:text-blue-200 text-sm">Connect with me:</span>
               <div className="flex space-x-3">
                 <a href="mailto:harini.y2k22@gmail.com" className="p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:bg-white/20 hover:scale-110 transition-all duration-300">
-                  <Mail className="w-5 h-5 text-white" />
+                  <Mail className="w-5 h-5 text-gray-700 dark:text-white" />
                 </a>
                 <a href="#" className="p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:bg-white/20 hover:scale-110 transition-all duration-300">
-                  <Linkedin className="w-5 h-5 text-white" />
+                  <Linkedin className="w-5 h-5 text-gray-700 dark:text-white" />
                 </a>
                 <a href="#" className="p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:bg-white/20 hover:scale-110 transition-all duration-300">
-                  <Github className="w-5 h-5 text-white" />
+                  <Github className="w-5 h-5 text-gray-700 dark:text-white" />
                 </a>
               </div>
             </div>
