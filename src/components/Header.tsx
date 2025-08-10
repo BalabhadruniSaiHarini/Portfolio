@@ -59,9 +59,23 @@ const Header: React.FC = () => {
             ))}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-200 hover:scale-110 transform"
+              className="relative p-3 rounded-2xl bg-gradient-to-r from-blue-100 to-purple-100 dark:from-gray-700 dark:to-gray-600 hover:from-blue-200 hover:to-purple-200 dark:hover:from-gray-600 dark:hover:to-gray-500 transition-all duration-300 hover:scale-110 transform shadow-lg hover:shadow-xl group"
             >
-              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              <div className="relative w-6 h-6">
+                {isDark ? (
+                  <Sun className="w-6 h-6 text-yellow-500 group-hover:text-yellow-400 transition-colors duration-300 animate-spin-slow" />
+                ) : (
+                  <Moon className="w-6 h-6 text-indigo-600 group-hover:text-indigo-500 transition-colors duration-300" />
+                )}
+                {/* Glow effect */}
+                <div className={`absolute inset-0 rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-300 ${
+                  isDark ? 'bg-yellow-400' : 'bg-indigo-400'
+                }`}></div>
+              </div>
+              {/* Tooltip */}
+              <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-800 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                {isDark ? 'Light Mode' : 'Dark Mode'}
+              </div>
             </button>
           </div>
 
@@ -69,9 +83,19 @@ const Header: React.FC = () => {
           <div className="md:hidden flex items-center space-x-4">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-200 hover:scale-110 transform"
+              className="relative p-3 rounded-2xl bg-gradient-to-r from-blue-100 to-purple-100 dark:from-gray-700 dark:to-gray-600 hover:from-blue-200 hover:to-purple-200 dark:hover:from-gray-600 dark:hover:to-gray-500 transition-all duration-300 hover:scale-110 transform shadow-lg hover:shadow-xl group"
             >
-              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              <div className="relative w-6 h-6">
+                {isDark ? (
+                  <Sun className="w-6 h-6 text-yellow-500 group-hover:text-yellow-400 transition-colors duration-300 animate-spin-slow" />
+                ) : (
+                  <Moon className="w-6 h-6 text-indigo-600 group-hover:text-indigo-500 transition-colors duration-300" />
+                )}
+                {/* Glow effect */}
+                <div className={`absolute inset-0 rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-300 ${
+                  isDark ? 'bg-yellow-400' : 'bg-indigo-400'
+                }`}></div>
+              </div>
             </button>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
