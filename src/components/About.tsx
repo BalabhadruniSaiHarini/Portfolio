@@ -69,8 +69,7 @@ const About: React.FC = () => {
                 <div className="w-8 h-8 text-green-600 mr-3 animate-pulse">💪</div>
                 <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Strengths</h3>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 gap-4">
                 {[
                   { name: 'Team Collaboration', emoji: '🤝' },
                   { name: 'Communication', emoji: '💬' },
@@ -87,15 +86,14 @@ const About: React.FC = () => {
                 ].map((strength, index) => (
                   <div 
                     key={index}
-                    className="flex flex-col sm:flex-row items-center sm:items-start p-3 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 animate-fade-in-stagger text-center sm:text-left"
+                    className="flex flex-col items-center p-4 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 animate-fade-in-stagger text-center group"
                     data-aos="fade-up"
                     data-aos-delay={index * 50}
                   >
-                    <span className="text-xl mb-2 sm:mb-0 sm:mr-3 flex-shrink-0">{strength.emoji}</span>
-                    <span className="text-gray-700 dark:text-gray-300 text-xs sm:text-sm font-medium leading-tight">{strength.name}</span>
+                    <span className="text-2xl mb-3 group-hover:scale-110 transition-transform duration-200">{strength.emoji}</span>
+                    <span className="text-gray-700 dark:text-gray-300 text-sm font-medium leading-tight px-1">{strength.name}</span>
                   </div>
                 ))}
-              </div>
               </div>
             </div>
           </div>
