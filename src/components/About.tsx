@@ -23,14 +23,14 @@ const About: React.FC = () => {
               <div className="space-y-4">
                 <div>
                   <h4 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
-                    BTech in Electronics & Communication Engineering
+                    10th Grade
                   </h4>
-                  <p className="text-gray-600 dark:text-gray-400">Aditya Engineering College</p>
-                  <p className="text-gray-600 dark:text-gray-400">2023 - 2026</p>
+                  <p className="text-gray-600 dark:text-gray-400">Sri Annapurna CBSE High School - Mandapeta</p>
+                  <p className="text-gray-600 dark:text-gray-400">2020</p>
                   <div className="mt-2 flex items-center">
                     <Award className="w-5 h-5 text-yellow-500 mr-2" />
                     <span className="text-lg font-semibold text-blue-600 dark:text-blue-400">
-                      CGPA: 8.71/10
+                      Percentage: 95%
                     </span>
                   </div>
                 </div>
@@ -49,14 +49,14 @@ const About: React.FC = () => {
                 </div>
                 <div className="border-t border-gray-200 dark:border-gray-600 pt-4">
                   <h4 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
-                    10th Grade
+                    BTech in Electronics & Communication Engineering
                   </h4>
-                  <p className="text-gray-600 dark:text-gray-400">Sri Annapurna CBSE High School - Mandapeta</p>
-                  <p className="text-gray-600 dark:text-gray-400">2020</p>
+                  <p className="text-gray-600 dark:text-gray-400">Aditya Engineering College</p>
+                  <p className="text-gray-600 dark:text-gray-400">2023 - 2026</p>
                   <div className="mt-2 flex items-center">
                     <Award className="w-5 h-5 text-yellow-500 mr-2" />
                     <span className="text-lg font-semibold text-blue-600 dark:text-blue-400">
-                      Percentage: 95%
+                      CGPA: 8.71/10
                     </span>
                   </div>
                 </div>
@@ -70,6 +70,7 @@ const About: React.FC = () => {
                 <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Strengths</h3>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {[
                   { name: 'Team Collaboration', emoji: '🤝' },
                   { name: 'Communication', emoji: '💬' },
@@ -86,12 +87,12 @@ const About: React.FC = () => {
                 ].map((strength, index) => (
                   <div 
                     key={index}
-                    className="flex items-center p-3 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 animate-fade-in-stagger"
+                    className="flex flex-col sm:flex-row items-center sm:items-start p-3 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 animate-fade-in-stagger text-center sm:text-left"
                     data-aos="fade-up"
                     data-aos-delay={index * 50}
                   >
-                    <span className="text-xl mr-3">{strength.emoji}</span>
-                    <span className="text-gray-700 dark:text-gray-300 text-sm font-medium">{strength.name}</span>
+                    <span className="text-xl mb-2 sm:mb-0 sm:mr-3 flex-shrink-0">{strength.emoji}</span>
+                    <span className="text-gray-700 dark:text-gray-300 text-xs sm:text-sm font-medium leading-tight">{strength.name}</span>
                   </div>
                 ))}
               </div>
